@@ -36,6 +36,11 @@ router.get('/about', function(req, res, next) {
     res.render('contact');
   });
 
+
+  router.get('/Resume', function(req, res, next) {
+    res.render('Resume');
+  });
+
   router.get('/project1', function(req, res) {
     res.sendFile(path.join(__dirname, '../public/static-projects/project1/index.html'));
   });
