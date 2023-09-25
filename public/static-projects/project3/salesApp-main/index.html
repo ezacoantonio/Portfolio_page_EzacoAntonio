@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background: #f5f5f5;
+    }
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .item img {
+      width: 100%;
+      max-width: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .item input {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    .item p {
+      color: #888;
+    }
+    button {
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    @media screen and (min-width: 600px) {
+      .item {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .item img {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+      .item input {
+        margin-right: 10px;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Sales Calculator</h1>
+
+<div id="inventory"></div>
+
+<button onclick="calculateInventory()">Calculate Sales</button>
+
+<p id="totalSales"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html>

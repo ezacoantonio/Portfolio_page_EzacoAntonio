@@ -11,6 +11,8 @@
 // module.exports = router;
 
 const express = require('express');
+const path = require('path');
+
 const router = express.Router();
 
 let indexController = require('../controllers/index');
@@ -34,4 +36,17 @@ router.get('/about', function(req, res, next) {
     res.render('contact');
   });
 
+  router.get('/project1', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/static-projects/project1/index.html'));
+  });
+
+  router.get('/project1', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/static-projects/project2/index.html'));
+  });
+
+  router.get('/project1', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/static-projects/project3/index.html'));
+  });
+  
+  
 module.exports = router;

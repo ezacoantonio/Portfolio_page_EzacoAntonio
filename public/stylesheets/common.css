@@ -1,0 +1,99 @@
+/* Center the logo */
+.img_style {
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .img_style img { /* Adjust the size as needed */
+    margin: auto;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  /* Common Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+    transition: all 0.3s ease;
+  }
+  
+  /* Center the content */
+  .container {
+    margin: auto;
+    padding: 20px;
+    max-width: 80%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Welcome Message */
+  .textcontainer {
+    text-align: center;
+    margin: 150px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .textcontainer h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .textcontainer p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effects */
+  .textcontainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Mobile Friendly */
+  @media only screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .img_style img {
+      max-width: 100px;
+    }
+  }
+  
+
+
+  /* Project Cards */
+.project-card {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.project-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
