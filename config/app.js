@@ -9,6 +9,8 @@ var indexRouter = require('../apps/routes/index');
 app.use('/',indexRouter);
 var usersRouter = require('../apps/routes/users');
 app.use('/static-projects', express.static(path.join(__dirname, 'public/static-projects')));
+app.use('/public/ResumeEzacoAntonio', express.static(path.join(__dirname, 'public/Resume Ezaco Antonio')));
+
 
 
 // view engine setup

@@ -1,14 +1,6 @@
-// var express = require('express');
-// var router = express.Router();
+// This is the main entry point for the application.
+// It sets up the server, requires routes, and handles middleware.
 
-//  let indexController = require('../controllers/index');
-
-// /* GET home page. */
-// router.get('/', indexController.home);
-
-// router.get('/about', indexController.about);
-
-// module.exports = router;
 
 const express = require('express');
 const path = require('path');
@@ -53,5 +45,9 @@ router.get('/about', function(req, res, next) {
     res.sendFile(path.join(__dirname, '../public/static-projects/project3/index.html'));
   });
   
+  router.get('/resume', function(req, res, next) {
+    var filePath = path.join(__dirname, '../public/Resume Ezaco Antonio.pdf'); // Replace 'your-file-name.pdf' with your actual file name
+    res.sendFile(filePath);
+  });
   
 module.exports = router;

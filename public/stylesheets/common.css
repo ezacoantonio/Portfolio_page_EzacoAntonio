@@ -1,79 +1,79 @@
 /* Center the logo */
 .img_style {
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .img_style img { /* Adjust the size as needed */
-    margin: auto;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  
-  /* Common Styles */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #efefef;
-    transition: all 0.3s ease;
-  }
-  
-  /* Center the content */
+  text-align: center;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Adjust the size of the image within .img_style */
+.img_style img {
+  margin: auto;
+  display: block;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Common styles for the body of the page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Center the main content */
+.container {
+  margin: auto;
+  padding: 20px;
+  max-width: 80%;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styles for the text container */
+.textcontainer {
+  text-align: center;
+  margin: 50px 100px 50px 100px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styles for the heading within the text container */
+.textcontainer h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Styles for the paragraph within the text container */
+.textcontainer p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the text container */
+.textcontainer:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile-friendly adjustments */
+@media only screen and (max-width: 768px) {
   .container {
-    margin: auto;
-    padding: 20px;
-    max-width: 80%;
-    transition: all 0.3s ease;
+    padding: 10px;
   }
-  
-  /* Welcome Message */
-  .textcontainer {
-    text-align: center;
-    margin: 150px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  .img_style img {
+    max-width: 100px;
   }
-  
-  .textcontainer h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .textcontainer p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    transition: all 0.3s ease;
-  }
-  
-  /* Hover Effects */
-  .textcontainer:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Smooth Scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Mobile Friendly */
-  @media only screen and (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    .img_style img {
-      max-width: 100px;
-    }
-  }
-  
+}
 
-
-  /* Project Cards */
+/* Styles for project cards */
 .project-card {
   text-align: center;
   margin: 20px;
@@ -83,11 +83,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles for images within project cards */
 .project-card img {
   max-width: 300px;
   border-radius: 8px;
 }
 
+/* Styles for buttons within project cards */
 .project-button {
   display: inline-block;
   margin-top: 10px;
@@ -96,4 +98,81 @@
   color: #fff;
   border-radius: 4px;
   text-decoration: none;
+}
+
+/* Styles for the service section */
+.service-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Styles for service images */
+.service-img {
+  flex: 1;
+  max-width: 200px;
+  height: auto;
+  border-radius: 25%;
+}
+
+/* Hover effect for service images */
+.service-img:hover {
+  transform: scale(1.1);
+  border: 1px solid orange;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styles for the content beside service images */
+.service-content {
+  flex: 2;
+  padding: 0 20px;
+}
+
+/* Styles for the title of each service */
+.service-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the description of each service */
+.service-description {
+  font-size: 16px;
+}
+
+/* Styles for form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Styles for labels within forms */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styles for text inputs within forms */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for the submit button within forms */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+button:hover {
+  background-color: #0056b3;
 }
