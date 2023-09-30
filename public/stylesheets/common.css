@@ -1,15 +1,114 @@
+/*-----------------------------------------------------------*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* Center the navbar items */
+.navbar-nav {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Add hover effect to nav links */
+.nav-link {
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #ff562279;
+  border-radius: 12px;
+}
+
+
+/*-----------------------------------------------------------*/
+
+
+/* Increase font size and add padding */
+.shining-text {
+  font-size: 24px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create the shining effect */
+.shining-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ff562279, transparent);
+  animation: shine 2.5s infinite;
+}
+
+/* Animation */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/*-----------------------------------------------------------*/
+
+/* Container style */
+.resume-link {
+  justify-content: center;
+  text-align: center;
+  border: 2px #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 20px;
+  transition: all 0.3s ease;
+  color: #ff5722;
+  text-decoration: none;
+  animation: glow 2s infinite alternate;
+}
+
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff562279, 0 0 20px #ff562279, 0 0 25px #ff562279, 0 0 30px #ff562279, 0 0 35px #ff562279;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+/* Hover effects */
+.resume-link:hover {
+  background-color: #efcabe;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  opacity: 0.8;
+}
+
+/*-----------------------------------------------------------*/
+
 /* Center the logo */
 .img_style {
   text-align: center;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Adjust the size of the image within .img_style */
+/* Adjust the size of the image within .img_style.*/
 .img_style img {
   margin: auto;
   display: block;
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  transition: all 0.3s ease; 
 }
+
+/*-----------------------------------------------------------*/
 
 /* Common styles for the body of the page */
 body {
@@ -27,6 +126,8 @@ body {
   max-width: 80%;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
+
+/*-----------------------------------------------------------*/
 
 /* Styles for the text container */
 .textcontainer {
@@ -58,6 +159,8 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/*-----------------------------------------------------------*/
+
 /* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -72,6 +175,8 @@ html {
     max-width: 100px;
   }
 }
+
+/*-----------------------------------------------------------*/
 
 /* Styles for project cards */
 .project-card {
@@ -94,11 +199,13 @@ html {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #ff562279;
   color: #fff;
   border-radius: 4px;
   text-decoration: none;
 }
+
+/*-----------------------------------------------------------*/
 
 /* Styles for the service section */
 .service-section {
@@ -118,7 +225,7 @@ html {
 /* Hover effect for service images */
 .service-img:hover {
   transform: scale(1.1);
-  border: 1px solid orange;
+  border: 1px solid ff562279;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -138,6 +245,8 @@ html {
 .service-description {
   font-size: 16px;
 }
+
+/*-----------------------------------------------------------*/
 
 /* Styles for form groups */
 .form-group {
@@ -165,7 +274,7 @@ textarea {
 /* Styles for the submit button within forms */
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #ff562279;
   color: white;
   border: none;
   border-radius: 4px;

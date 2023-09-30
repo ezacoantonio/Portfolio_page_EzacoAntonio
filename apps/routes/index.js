@@ -29,9 +29,21 @@ router.get('/about', function(req, res, next) {
   });
 
   
+  // router.get('/resume', function(req, res, next) {
+  //   var filePath = path.join(__dirname, '../public/assets/ResumeEzacoAntonio.pdf');
+  //   res.sendFile(filePath);
+  // });
+
+  const fs = require('fs');
+
   router.get('/resume', function(req, res, next) {
-    var filePath = path.join(__dirname, '../public/Resume Ezaco Antonio.pdf'); // Replace 'your-file-name.pdf' with your actual file name
-    res.sendFile(filePath);
-  });
-  
+  const filePath = path.join(__dirname, '../public/assets/ResumeEzacoAntonio.pdf');
+  const stat = fs.statSync(filePath);
+  res.setHeader('Content-Length', stat.size);
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'attachment; filename=ResumeEzacoAntonio.pdf');
+  const file = fs.createReadStream(filePath);
+  file.pipe(res);
+});
+
 module.exports = router;
