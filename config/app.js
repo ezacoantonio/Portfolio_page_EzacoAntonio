@@ -17,15 +17,16 @@ app.use('/public/ResumeEzacoAntonio', express.static(path.join(__dirname, 'publi
 app.set('views', path.join(__dirname, '../apps/views'));
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+
+//Middleware and Static Files
+app.use(logger('dev')); 
+app.use(express.json()); // parse application/json
+app.use(express.urlencoded({ extended: false })); //Express middleware for handling URL-encoded data.
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
 
-
-
+//Routes handled by another file
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
